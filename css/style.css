@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+    
+header{
+    margin-top: 20px;
+}
+a {
+    color: #20C20E;
+    text-decoration: none;
+}
+.menu_1
+{
+    color: #20C20E;
+    list-style: none;
+    padding-left: 360px;
+    margin-left: 3%;
+}
+.menu_1 li{
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    border: #000000 1px solid;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.menu_1 li:hover{
+    border: #20C20E 1px solid;
+}
+.name{
+    color: #20C20E;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 150px;
+    margin-left: 180px;
+    animation: MoveUpDown 2.5s linear infinite;
+    position: absolute;
+    width: 50%;
+}
+.icon_below_hii a:hover{
+    color: red;
+
+}
+.imgdiv{
+    margin-left: 40px;
+    margin-top: 130px;
+    float: left;
+}
+.imgdiv img{
+    float: left;
+    animation: tool 1.5s linear infinite;
+}
+.pic{
+    animation: moveimage 2s linear infinite;
+    float: right;
+    margin-top: 60px;
+    margin-right: 150px;
+    margin-bottom:50px ;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px green solid;
+}
+#image{
+    border-radius: 20px;
+    background: linear-gradient(green, lime);
+}
+#image img{
+     border-radius: 20px;
+    opacity: 70%;
+}
+.tools{
+    color: #20C20E;
+    clear: both;
+    text-align: center;
+}
+.tools1{
+    animation: tool 2.5s linear infinite;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.footer{
+    color: #20C20E;
+    border: #20C20E 1px solid;
+    left: 0;
+    bottom: 0;
+    width: 99.6%;
+    text-align: center;
+}
+.bottom{
+    padding: 50px;
+}
+.icon-footer-row{
+    float: right;
+    margin-right: 80px;
+}
+.id-address{
+    font-size: small;
+    float: left;
+    margin-left: 80px;
+}
+.copyright {
+    clear: both;
+}
+.icon-footer-row a:hover{
+    color: red;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        margin-top: 150px;
+    }
+    50% {
+        margin-top: 180px;
+    }
+  }
+@keyframes moveimage{
+    0%,100% {
+        margin-top: 60px;
+    }
+    50% {
+        margin-top: 70px;
+        margin-bottom: 40px;
+    }
+}
+@keyframes tool{
+    0%,100% {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    50% {
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+}
+@keyframes img{
+    0%,100% {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    50% {
+        margin-top: 0px;
+        margin-bottom: 70px;
+    }
+}
