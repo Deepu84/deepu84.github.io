@@ -9,6 +9,7 @@
 </head>
 <body class="stars">
     <header>
+        <embed src="1.mp3" width="180" height="90" loop="false" autostart="false" hidden="true" />
         <div class="menu">
             <nav>
                 <ul class="menu_1">
@@ -22,6 +23,7 @@
         </div>
     </header>
     <div class="containts">
+        <canvas id=c></canvas>
         <div class="imgdiv"><img src="pic/Picture1.png" height="150px"></div>
         
         <div class="name">
@@ -81,4 +83,37 @@
     </footer>
     </div>
 </body>
+<script>(()=>{
+	
+    let $ = c.getContext("2d"),
+        w = c.width = window.innerWidth, 
+       h = c.height = 1000,
+        random =n=>Math.random()*n,
+        stars = new Array(1000).fill().map(()=>{
+             return {r: random(w), s: random(0.01), a: random(Math.PI*2)}; 
+        });
+        
+      console.log(stars)
+  function loop(){
+    $.fillStyle = "rgba(0,0,8,.1)";
+    $.fillRect(0,0,w,h);
+    stars.forEach(e=>{
+      e.a+=e.s; 
+      $.beginPath();
+      $.arc(Math.cos(e.a)*e.r + w/2, Math.sin(e.a)*e.r + h/2, 1,0,Math.PI*2);
+      $.closePath();
+      $.fillStyle = "white";
+      $.fill();
+    })
+
+    requestAnimationFrame(loop);
+  }
+  
+    requestAnimationFrame(loop); 
+    
+    window.addEventListener("resize", ()=>{
+    w = c.width = window.innerWidth;
+    h = c.height = window.innerHeight;
+  }) 
+    })()</script>   
 </html>
